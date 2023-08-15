@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  background: linear-gradient(to bottom, #1068c6, #d0caca);
+}
+.text-shadow-bold {
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}

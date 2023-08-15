@@ -1,8 +1,17 @@
 <div class="d-flex flex-wrap justify-content-center align-items-center vh-100">
-  <div class="text-center mb-3">
-    <h2 class="text-success mb-3">Tasks View</h2>
-    <% @tasks.each do |task| %>
-      <h4 class="text-primary"><%= task.details %></h4>
-    <% end %>
+  <div class="card text-center p-3 shadow" style="background-color: #dddddd;">
+    <h2 class="text-primary mb-3 text-shadow-bold"><%= @task.title %></h2>
+    <div class="card-body shadow p-1" style="background-color: #d9d9d9;">
+      <p class="text-dark text-shadow-bold"><%= @task.details %></p>
+      <p class="text-warning text-shadow-bold">
+        Status:
+        <% if @task.completed %>
+          <span class="text-success">Done</span>
+        <% else %>
+          <span class="text-danger">Still on the List</span>
+        <% end %>
+      </p>
     </div>
+    <%= button_to "Go Back", tasks_path, method: :get, class: "btn btn-primary mt-3" %>
+  </div>
 </div>
