@@ -1,13 +1,6 @@
 <h2 class="text-success mb-3 text-shadow-bold">Edit a Task</h2>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.label :completed %>
-  <%= f.check_box :completed %>
-  <%= f.submit %>
-<% end %>
+<%# original form moved to _form.html.erb - these files will render the form from there %>
+<%= render "form", task: @task %>
 
 <%= button_to "Go Back", tasks_path, method: :get, class: "btn btn-primary mt-3" %>
