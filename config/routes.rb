@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-
+  # , as: :new_task can be named anything you want, as long as the naming convention is consistent in all filepaths
   get '/tasks', to: 'tasks#index'
   get '/tasks/new', to: 'tasks#new', as: :new_task
   post '/tasks', to: 'tasks#create'
