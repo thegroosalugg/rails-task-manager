@@ -1,13 +1,10 @@
-<div class="d-flex flex-wrap justify-content-center align-items-center vh-100">
-  <div class="card text-center p-3 shadow" style="background-color: #dddddd;">
-    <h2 class="text-success mb-2 text-shadow-bold">Tasks View</h2>
-    <% @tasks.each do |task| %>
-      <div class="card shadow mb-2 text-shadow-bold">
-        <div class="card-body p-1" style="background-color: #d9d9d9;">
-          <h4 class="text-primary mb-2"><%= link_to task.title, task_path(task), class: "text-decoration-none" %></h4>
-        </div>
-      </div>
-    <% end %>
-    <%= button_to "New Task", new_task_path, method: :get, class: "btn btn-primary mt-3" %>
+<h2 class="text-success mb-2 text-shadow-bold">Tasks View</h2>
+<% @tasks.each do |task| %>
+  <div class="card shadow mb-2 text-shadow-bold">
+    <div class="card-body p-1" style="background-color: #d9d9d9;">
+      <h4 class="text-primary mb-2"><%= link_to task.title, task_path(task), class: "text-decoration-none" %></h4>
+    </div>
   </div>
+<% end %>
+<%= button_to "New Task", new_task_path, method: :get, class: "btn btn-primary mt-3" %>
 </div>
