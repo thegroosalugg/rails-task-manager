@@ -1,0 +1,8 @@
+<div class="d-flex flex-wrap justify-content-center align-items-center vh-100">
+  <div class="text-center mb-3">
+    <h2 class="text-success mb-3">Tasks View</h2>
+    <% @tasks.each do |task| %>
+      <h4 class="text-primary"><%= task.details %></h4>
+    <% end %>
+    </div>
+</div>
